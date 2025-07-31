@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="Bank Sampah Website" />
+    <meta
+      name="description"
+      content="Ecolective adalah platform yang membantu memudahkan Anda untuk mendaur ulang sampah di bank sampah terdekat dan mendapatkan poin sebagai imbalan."
+    />
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+    />
+    <!-- SwiperCSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Ecolective</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="navbar" class="bg-blue-950 fixed w-full top-0 left-0 z-50">
+      <nav class="container flex items-center justify-between h-16 sm:h-20">
+        <!-- Logo -->
+        <div class="font-bebas text-2xl text-white flex items-center gap-2">
+          <img
+            src="./assets/img/logo.png"
+            alt="Ecolective Logo"
+            class="h-8 w-auto"
+          />
+          Ecolective
+        </div>
+
+        <!-- Navigasi Menu -->
+        <div
+          id="nav-menu"
+          class="absolute top-0 left-[-100%] min-h-[50vh] w-full bg-blue-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
+        >
+          <ul class="flex flex-col items-center gap-8 lg:flex-row">
+            <li>
+              <a href="#beranda" class="nav-link">Beranda</a>
+            </li>
+            <li>
+              <a href="#tentang_kami" class="nav-link">Tentang Kami</a>
+            </li>
+            <li>
+              <a href="#kategori" class="nav-link">Kategori</a>
+            </li>
+            <li>
+              <a href="#blog" class="nav-link">Blog</a>
+            </li>
+            <li>
+              <a href="#ulasan" class="nav-link">Ulasan</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-xl sm:text-3xl cursor-pointer z-50 lg:hidden">
+          <i class="ri-menu-4-line" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Navbar -->
+
+    <main>
+      <!-- Home -->
+      <section id="beranda" class="relative overflow-hidden">
+        <div class="container">
+          <!-- Blob -->
+          <div
+            class="w-64 h-64 bg-blue-700 rounded-full blur-3xl absolute top-1/2 left-1/2 -z-10 opacity-50 transform -translate-x-1/2 -translate-y-1/2"
+          ></div>
+          <div
+            class="w-64 h-64 bg-blue-700 rounded-full blur-3xl absolute right-0 bottom-28 opacity-50 -z-10"
+          ></div>
+          <!-- Blob -->
+
+          <div class="flex flex-col items-center gap-5 lg:flex-row">
+            <!-- Home Content -->
+            <div class="beranda_content w-full space-y-5 lg:w-1/2">
+              <h1>
+                <span class="text-primary">Ubah</span> Sampah Menjadi <br />
+                <span id="typed" class="text-primary"></span>!
+              </h1>
+
+              <p class="text-slate-300 font-poppins">
+                Dengan bank sampah, Anda dapat mengelola sampah dengan bijak.
+                <br />
+                Mari kita bergandengan tangan untuk lingkungan yang lebih
+                bersih!
+              </p>
+
+              <div
+                class="flex flex-col gap-2 sm:flex-row md:gap-4 lg:pt-5 xl:pt-10"
+              >
+                <a
+                  href="#form-daftar"
+                  class="btn inline-flex items-center gap-2"
+                >
+                  <span>Ayo Bergabung</span>
+                  <i class="ri-magic-fill"></i>
+                </a>
+
+                <a href="#tentang_kami" class="btn btn_outline">
+                  <span>Informasi Selengkapnya</span>
+                  <i class="ri-arrow-left-up-box-fill"></i
+                ></a>
+              </div>
+
+              <p class="text-xs font-poppins text-slate-300">
+                *Dapatkan poin setiap kali Anda mendaur ulang sampah! <br />
+                *Tukarkan poin dengan barang-barang menarik!
+              </p>
+
+              <div class="flex gap-5 items-center text-lg lg:pt-6">
+                <i class="ri-facebook-fill sosmed"></i>
+                <i class="ri-instagram-line sosmed"></i>
+                <i class="ri-twitter-fill sosmed"></i>
+                <i class="ri-youtube-fill sosmed"></i>
+              </div>
+            </div>
+
+            <div class="w-full relative z-10 pt-4 lg:w-1/2 animate-movingY">
+              <img
+                src="./assets/img/home.png"
+                alt="image_sampah"
+                class="image_sampah w-[300px] md:w-[400px] lg:w-[500px]"
+              />
+              <span
+                class="absolute sm:-top-12 md:-top-16 lg:-top-20 sm:-left-12 md:-left-14 lg:-left-16 -z-10"
+              >
+                <svg
+                  class="sm:w-[400px] md:w-[500px] xl:w-[650px]"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                    >
+                      <stop offset="40%" style="stop-color: #4ade80" />
+                      <stop offset="60%" style="stop-color: #15803d" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#gradient)" transform="translate(100 100)">
+                    <animate
+                      attributeName="d"
+                      dur="10000ms"
+                      repeatCount="indefinite"
+                      values="M38.1,-51.2C50.7,-43.3,63.1,-33.9,64.8,-22.5C66.5,-11.1,57.4,2.3,53.7,18.6C50,34.9,51.7,54.2,43.6,64C35.6,73.7,17.8,74,-0.6,74.9C-19,75.7,-38,77.1,-46,67.3C-54,57.5,-51,36.5,-50.2,20.6C-49.4,4.7,-50.9,-6.2,-51.3,-20.3C-51.6,-34.3,-50.9,-51.7,-42.1,-60.8C-33.4,-69.9,-16.7,-70.9,-2,-68.1C12.8,-65.4,25.5,-59,38.1,-51.2Z;
+                                        
+                                        M49.4,-68C60.6,-59.9,63.8,-40.8,65.3,-24.1C66.9,-7.3,66.8,7.2,62,19.5C57.1,31.8,47.4,41.8,36.3,50.6C25.1,59.4,12.6,66.9,0.3,66.5C-12,66.1,-24,57.9,-37.8,49.9C-51.6,42,-67.2,34.5,-71.2,22.9C-75.2,11.4,-67.7,-4.1,-63.5,-21.7C-59.3,-39.4,-58.4,-59.3,-48.4,-67.7C-38.3,-76.1,-19.2,-73.1,0,-73.1C19.1,-73.1,38.3,-76.1,49.4,-68Z;
+                                        
+                                        M39.1,-53.6C50.1,-45.8,58.1,-33.6,60.5,-20.9C62.8,-8.2,59.7,5.1,54.2,16.2C48.7,27.3,40.8,36.3,31.4,47.9C21.9,59.5,11,73.8,-2.7,77.4C-16.3,81.1,-32.6,74.3,-48.2,64.7C-63.8,55.1,-78.7,42.7,-78.7,28.9C-78.6,15,-63.6,-0.4,-53,-12.4C-42.4,-24.3,-36.2,-32.8,-28.1,-41.6C-20,-50.3,-10,-59.2,2,-62C14.1,-64.8,28.1,-61.4,39.1,-53.6Z;
+                                        
+                                        M37.2,-50.1C49.1,-42.4,60.5,-32.9,64.1,-21C67.8,-9.1,63.8,5.2,57.9,17.5C52,29.8,44.4,40.1,34.4,51.5C24.4,62.9,12.2,75.3,-2.4,78.7C-17.1,82,-34.2,76.3,-49.3,66.6C-64.4,56.9,-77.5,43.2,-79.8,27.9C-82.1,12.5,-73.6,-4.3,-66.2,-19.8C-58.8,-35.3,-52.5,-49.4,-41.6,-57.4C-30.8,-65.4,-15.4,-67.2,-1.4,-65.3C12.6,-63.4,25.2,-57.7,37.2,-50.1Z;
+                                        
+                                        M36,-51C48,-40.8,60.1,-32.1,62.3,-21.2C64.6,-10.2,57.1,2.9,54,19.1C50.9,35.3,52.2,54.5,44,67.2C35.7,79.8,17.9,85.8,1,84.4C-15.9,83.1,-31.7,74.3,-46.3,63.7C-61,53.1,-74.3,40.8,-80.2,25.4C-86.2,10,-84.6,-8.5,-77,-22.9C-69.4,-37.3,-55.8,-47.7,-41.9,-57.3C-28.1,-66.8,-14.1,-75.6,-1,-74.2C12,-72.8,24,-61.2,36,-51Z;
+                                        
+                                        M38.1,-51.2C50.7,-43.3,63.1,-33.9,64.8,-22.5C66.5,-11.1,57.4,2.3,53.7,18.6C50,34.9,51.7,54.2,43.6,64C35.6,73.7,17.8,74,-0.6,74.9C-19,75.7,-38,77.1,-46,67.3C-54,57.5,-51,36.5,-50.2,20.6C-49.4,4.7,-50.9,-6.2,-51.3,-20.3C-51.6,-34.3,-50.9,-51.7,-42.1,-60.8C-33.4,-69.9,-16.7,-70.9,-2,-68.1C12.8,-65.4,25.5,-59,38.1,-51.2Z"
+                    ></animate>
+                  </path>
+                </svg>
+              </span>
+              <div
+                class="absolute -top-10 right-10 opacity-30 animate-movingY xl:top-5 w-20 lg:-top-12"
+              >
+                <img
+                  src="./assets/img/rupiah.png"
+                  alt="rupiah"
+                  class="invert rotate-12"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Home -->
+
+      <!-- Waves -->
+      <span class="relative -bottom-1 overflow-hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 100"
+          fill="#FFFFFF"
+          class="w-full h-full transform scale-x-[-1] scale-y-[-1]"
+        >
+          <path
+            d="M0 0v99.7C62 69 122.4 48.7 205 66c83.8 17.6 160.5 20.4 240-12 54-22 110-26 173-10a392.2 392.2 0 0 0 222-5c55-17 110.3-36.9 160-27.2V0H0Z"
+            opacity=".5"
+          ></path>
+          <path
+            d="M0 0v74.7C62 44 122.4 28.7 205 46c83.8 17.6 160.5 25.4 240-7 54-22 110-21 173-5 76.5 19.4 146.5 23.3 222 0 55-17 110.3-31.9 160-22.2V0H0Z"
+          ></path>
+        </svg>
+      </span>
+      <!-- Waves -->
+
+      <!-- Manfaat -->
+      <div class="bg-white text-blue-900 pt-10 pb-16">
+        <div
+          class="manfaat_content flex flex-col items-center text-center gap-5 mb-14 px-4"
+        >
+          <h2 class="font-poppins text-blue-500">Manfaat Bank Sampah</h2>
+          <p class="max-w-2xl">
+            Bank sampah memberikan banyak manfaat bagi lingkungan dan masyarakat
+            sekitar.
+          </p>
+        </div>
+        <div
+          class="container w-full grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4"
+        >
+          <!-- Manfaat -->
+          <div
+            class="manfaat_card border border-blue-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+          >
+            <div class="flex items-center gap-5">
+              <i
+                class="ri-shake-hands-line text-3xl md:text-4xl xl:text-5xl"
+              ></i>
+              <p class="md:text-lg font-bold">
+                Membangun<br />
+                Kesadaran Sosial
+              </p>
+            </div>
+            <p>
+              Melalui gerakan ini, masyarakat diajak untuk lebih peduli terhadap
+              lingkungan dan berkontribusi dalam menjaga kebersihan.
+            </p>
+          </div>
+
+          <div
+            class="manfaat_card border border-blue-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+          >
+            <div class="flex items-center gap-5">
+              <i class="ri-seedling-fill text-3xl md:text-4xl xl:text-5xl"></i>
+              <p class="md:text-lg font-bold">
+                Melestarikan<br />
+                Lingkungan
+              </p>
+            </div>
+            <p>
+              Bank sampah membantu dalam mengurangi jumlah sampah di lingkungan
+              sekitar. Dengan mendaur ulang sampah, kita dapat mengurangi jumlah
+              sampah yang masuk ke tempat pembuangan akhir.
+            </p>
+          </div>
+
+          <div
+            class="manfaat_card border border-blue-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+          >
+            <div class="flex items-center gap-5">
+              <i
+                class="ri-bar-chart-2-line text-3xl md:text-4xl xl:text-5xl"
+              ></i>
+              <p class="md:text-lg font-bold">
+                Meningkatkan<br />
+                Ekonomi
+              </p>
+            </div>
+            <p>
+              Dengan mendaur ulang sampah, kita dapat menciptakan peluang usaha
+              baru dan meningkatkan pendapatan masyarakat sekitar.
+            </p>
+          </div>
+
+          <div
+            class="manfaat_card border border-blue-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:-translate-y-1 duration-300 space-y-5"
+          >
+            <div class="flex items-center gap-5">
+              <i class="ri-hearts-line text-3xl md:text-4xl xl:text-5xl"></i>
+              <p class="md:text-lg font-bold">
+                Edukasi<br />
+                Masyarakat
+              </p>
+            </div>
+            <p>
+              Bank sampah berfungsi sebagai sarana edukasi bagi masyarakat
+              sekitar tentang pentingnya pengelolaan sampah yang baik.
+            </p>
+          </div>
+          <!-- Manfaat -->
+        </div>
+      </div>
+      <!-- Manfaat -->
+
+      <!-- Waves -->
+      <span class="relative -top-1 scale-x-105 overflow-hidden leading-[0]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 100"
+          fill="#FFFFFF"
+          class="w-full h-full"
+        >
+          <path
+            d="M0 0v99.7C62 69 122.4 48.7 205 66c83.8 17.6 160.5 20.4 240-12 54-22 110-26 173-10a392.2 392.2 0 0 0 222-5c55-17 110.3-36.9 160-27.2V0H0Z"
+            opacity=".5"
+          ></path>
+          <path
+            d="M0 0v74.7C62 44 122.4 28.7 205 46c83.8 17.6 160.5 25.4 240-7 54-22 110-21 173-5 76.5 19.4 146.5 23.3 222 0 55-17 110.3-31.9 160-22.2V0H0Z"
+          ></path>
+        </svg>
+      </span>
+      <!-- Waves -->
+
+      <!-- About -->
+      <section id="tentang_kami" class="relative overflow-hidden">
+        <div class="tk_image_pisang absolute -botton-0 -right-12 opacity-50">
+          <img
+            class="w-32 md:w-42 xl:w-52"
+            src="./assets/img/pisang.png"
+            alt="Ilustrasi kulit pisang sebagai sampah organik"
+          />
+        </div>
+
+        <div
+          class="tentang_kami_content flex flex-col items-center text-center gap-5 px-4 mb-20"
+        >
+          <h2 class="font-poppins text-primary">Tentang Kami</h2>
+          <p class="max-w-2xl">
+            Hidup sehat dimulai dari lingkungan yang bersih.
+          </p>
+        </div>
+
+        <div class="container space-y-10 xl:space-y-0">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center lg:flex-row gap-5">
+            <div class="tk_image_1 w-full lg:w-1/2">
+              <img
+                class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto"
+                src="./assets/img/step-1.png"
+                alt="tentang_kami_step_image"
+              />
+            </div>
+            <div class="tk_content_1 w-full lg:w-1/2">
+              <div class="space-y-5">
+                <h3>
+                  Apa itu
+                  <span class="text-primary">Ecolective</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  Ecolective adalah platform yang membantu memudahkan Anda untuk
+                  mendaur ulang sampah di bank sampah terdekat dan mendapatkan
+                  poin sebagai imbalan.
+                </p>
+                <h3>
+                  Apa itu
+                  <span class="text-primary">Bank Sampah</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  Bank sampah adalah tempat pengumpulan sampah yang sudah
+                  dipilah-pilah berdasarkan jenisnya. Sampah yang sudah dipilah
+                  ini kemudian dijual ke pihak yang membutuhkan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center lg:flex-row-reverse gap-5">
+            <div class="tk_image_2 w-full lg:w-1/2">
+              <img
+                class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto"
+                src="./assets/img/step-2.png"
+                alt="tentang_kami_step_image"
+              />
+            </div>
+            <div class="tk_content_2 w-full lg:w-1/2">
+              <div class="space-y-5">
+                <h3>
+                  Apa tujuan dari gerakan
+                  <span class="text-primary">Bank Sampah</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  Tujuan dari gerakan bank sampah adalah mengurangi jumlah
+                  sampah yang masuk ke tempat pembuangan akhir. Dengan mendaur
+                  ulang sampah, kita dapat mengurangi jumlah sampah yang masuk
+                  ke tempat pembuangan akhir.
+                </p>
+                <h3>
+                  Jenis sampah apa saja yang diterima oleh
+                  <span class="text-primary">Bank Sampah</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  Bank sampah menerima berbagai jenis sampah seperti kertas,
+                  plastik, logam, dan lainnya. Namun, sebaiknya Anda memilah
+                  sampah sebelum mengirimkannya ke bank sampah.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center lg:flex-row gap-5">
+            <div class="tk_image_1 w-full lg:w-1/2">
+              <img
+                class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto"
+                src="./assets/img/step-3.png"
+                alt="tentang_kami_step_image"
+              />
+            </div>
+            <div class="tk_content_1 w-full lg:w-1/2">
+              <div class="space-y-5">
+                <h3>
+                  Apa saja langkah-langkah untuk menjadi anggota
+                  <span class="text-primary">Bank Sampah</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  &bull; Daftarkan diri Anda sebagai anggota.
+                  <br />
+                  &bull; Kumpulkan sampah yang sudah dipilah.
+                  <br />
+                  &bull; Antar sampah ke bank sampah terdekat.
+                  <br />
+                </p>
+                <h3>
+                  Apa saja keuntungan menjadi anggota
+                  <span class="text-primary">Bank Sampah</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  &bull; Mendapatkan poin setiap kali Anda mendaur ulang sampah.
+                  <br />
+                  &bull; Tukarkan poin dengan barang-barang menarik. <br />
+                  &bull; Membantu menjaga kebersihan lingkungan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center lg:flex-row-reverse gap-5">
+            <div class="tk_image_2 w-full lg:w-1/2">
+              <img
+                class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto"
+                src="./assets/img/step-4.png"
+                alt="tentang_kami_step_image"
+              />
+            </div>
+            <div class="tk_content_2 w-full lg:w-1/2">
+              <div class="space-y-5">
+                <h3>
+                  Bagaimana cara mengetahui lokasi dari
+                  <span class="text-primary">Bank Sampah</span>
+                  ?
+                </h3>
+                <p class="text-slate-300 font-poppins">
+                  &bull; Anda dapat mengetahui lokasi bank sampah terdekat
+                  melalui website Ecolective. Website ini akan memberikan
+                  informasi mengenai lokasi bank sampah terdekat dari lokasi
+                  Anda. <br />
+                  &bull; Anda juga dapat mengetahui lokasi bank sampah terdekat
+                  melalui google maps. Cukup ketikkan "bank sampah terdekat"
+                  pada kolom pencarian google maps.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About -->
+
+      <!-- Category -->
+      <section id="kategori" class="relative">
+        <div
+          class="kategori_title flex flex-col items-center text-center gap-5 mb-40 mt-8 px-4"
+        >
+          <h2 class="font-poppins text-white">Kategori Sampah</h2>
+          <p class="max-w-2xl">
+            Sampah dapat dibedakan menjadi beberapa kategori berdasarkan
+            jenisnya.
+          </p>
+        </div>
+
+        <div
+          class="container mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 sm:gap-12 lg:gap-8 place-items-center"
+        >
+          <!-- Organic -->
+          <div
+            class="kategori_card bg-lime-700 p-10 pt-24 rounded-md relative w-80 h-[330px] text-center"
+          >
+            <img
+              src="./assets/img/sampah-organic.png"
+              alt="kategori_sampah_image"
+              class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500 hover:-top-8"
+            />
+            <h3 class="text-white font-semibold mb-4">Organik</h3>
+            <p class="text-slate-300 text-sm">
+              Sampah organik adalah sampah yang berasal dari bahan organik
+              seperti sisa makanan, daun, dan lainnya. Sampah organik dapat
+              dibuat menjadi kompos atau umpan ikan.
+            </p>
+          </div>
+
+          <!-- Anorganic -->
+          <div
+            class="kategori_card bg-yellow-700 p-10 pt-24 rounded-md relative w-80 h-[330px] text-center"
+          >
+            <img
+              src="./assets/img/sampah-anorganic.png"
+              alt="kategori_sampah_image"
+              class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500 hover:-top-8"
+            />
+            <h3 class="text-white font-semibold mb-4">Anorganik</h3>
+            <p class="text-slate-300 text-sm">
+              Sampah anorganik adalah sampah yang berasal dari bahan anorganik
+              seperti plastik, kertas, logam, dan lainnya. Sampah anorganik
+              dapat didaur ulang menjadi barang yang baru.
+            </p>
+          </div>
+
+          <!-- Limbah B3 -->
+          <div
+            class="kategori_card bg-red-700 p-10 pt-24 rounded-md relative w-80 h-[330px] text-center"
+          >
+            <img
+              src="./assets/img/sampah-b3.png"
+              alt="kategori_sampah_image"
+              class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500 hover:-top-8"
+            />
+            <h3 class="text-white font-semibold mb-4">Limbah B3</h3>
+            <p class="text-slate-300 text-sm">
+              Limbah B3 adalah limbah berbahaya dan beracun yang berasal dari
+              industri, rumah sakit, laboratorium, dan lainnya. Limbah B3 harus
+              dikelola dengan baik agar tidak mencemari lingkungan.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Category -->
+
+      <!-- Blog -->
+      <section id="blog" class="relative overflow-hidden">
+        <div class="absolute -top-8 -right-10 opacity-50">
+          <img
+            src="./assets/img/daun.png"
+            alt="daun"
+            class="blog_image_daun w-40 md:w-52 xl:w-64 rotate-120 -scale-x-100"
+          />
+        </div>
+        <div
+          class="blog_title flex flex-col items-center text-center gap-5 px-4 md:mt-10"
+        >
+          <h2 class="font-poppins text-primary">Blog</h2>
+          <p class="max-w-2xl text-gray-800">
+            Dapatkan informasi terbaru seputar bank sampah dan lingkungan hidup.
+          </p>
+        </div>
+        <!-- Container Blog -->
+        <div
+          id="blog-container"
+          class="blog_card container flex flex-wrap gap-6 justify-center pt-16"
+        ></div>
+
+        <!-- Pagination Buttons -->
+        <div class="blog_button flex flex-row justify-center gap-5 mt-8 z-10">
+          <button
+            id="prev-page"
+            class="bg-green-600 text-white px-4 py-2 w-32 rounded disabled:opacity-50 hover:bg-green-700 hover:-translate-y-1"
+            disabled
+          >
+            Prev
+          </button>
+          <button
+            id="next-page"
+            class="bg-green-600 text-white px-4 py-2 w-32 rounded disabled:opacity-50 hover:bg-green-700 hover:-translate-y-1"
+          >
+            Next
+          </button>
+        </div>
+      </section>
+      <!-- Blog -->
+
+      <!-- Review -->
+      <section id="ulasan" class="relative mb-20 md:mb-28 overflow-hidden">
+        <div class="absolute -top-8 -left-12 opacity-50">
+          <img
+            src="./assets/img/kaleng.png"
+            alt="kaleng"
+            class="ulasan_image_kaleng w-40 md:w-52 xl:w-64"
+          />
+        </div>
+        <div
+          class="ulasan_title flex flex-col items-center gap-8 text-center mb-4 px-4 md:mb-8 md:mt-6"
+        >
+          <h2 class="text-primary">Ulasan Pelanggan</h2>
+          <p class="max-w-2xl">
+            Apa kata mereka tentang Ecolective? Simak ulasan dari pelanggan kami
+            di bawah ini.
+          </p>
+        </div>
+
+        <div class="ulasan_content container">
+          <div class="swiper py-12">
+            <ul class="swiper-wrapper">
+              <!-- Review 1 -->
+              <li class="swiper-slide">
+                <div
+                  class="flex flex-col gap-5 bg-blue-900 rounded-md p-6 max-w-md mx-auto w-full"
+                >
+                  <p class="font-poppins line-clamp-6 overflow-hidden">
+                    Website Ecolective sangat membantu saya memahami cara
+                    mengelola sampah rumah tangga dengan benar. Panduan yang
+                    tersedia mudah dimengerti dan aplikatif.
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="./assets/img/review-1.png"
+                      alt="review_image"
+                      class="w-12 h-12 rounded-full"
+                    />
+                    <div class="ml-2">
+                      <p
+                        class="text-primary uppercase line-clamp-1 overflow-hidden"
+                      >
+                        Andini Prasetyo
+                      </p>
+                      <p>Warga Surabaya</p>
+                    </div>
+                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <!-- Review 2 -->
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-blue-900 rounded-md p-6">
+                  <p class="font-poppins line-clamp-6 overflow-hidden">
+                    Saya sangat terbantu dengan sistem penukaran poin di
+                    Ecolective. Sekarang sampah yang saya kumpulkan bisa menjadi
+                    nilai ekonomis. Ini solusi cerdas bagi masyarakat.
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="./assets/img/review-2.png"
+                      alt="review_image"
+                      class="w-12 h-12 rounded-full"
+                    />
+                    <div class="ml-2">
+                      <p
+                        class="text-primary uppercase line-clamp-1 overflow-hidden"
+                      >
+                        Wahyu Aji
+                      </p>
+                      <p>Mahasiswa</p>
+                    </div>
+                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <!-- Review 3 -->
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-blue-900 rounded-md p-6">
+                  <p class="font-poppins line-clamp-6 overflow-hidden">
+                    Sangat inspiratif! Dengan adanya Ecolective, saya bisa
+                    mengajak warga sekitar lebih peduli terhadap pengelolaan
+                    sampah. Informasinya lengkap dan mudah dipahami.
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="./assets/img/review-3.png"
+                      alt="review_image"
+                      class="w-12 h-12 rounded-full"
+                    />
+                    <div class="ml-2">
+                      <p
+                        class="text-primary uppercase line-clamp-1 overflow-hidden"
+                      >
+                        Lestari Rahmawati
+                      </p>
+                      <p>Guru Sekolah Dasar</p>
+                    </div>
+                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <!-- Review 4 -->
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-blue-900 rounded-md p-6">
+                  <p class="font-poppins line-clamp-6 overflow-hidden">
+                    Ecolective membuka wawasan saya tentang pentingnya menjaga
+                    lingkungan. Informasinya dikemas dengan menarik dan mudah
+                    dipahami. Saya sangat mengapresiasi inisiatif ini!
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="./assets/img/review-4.png"
+                      alt="review_image"
+                      class="w-12 h-12 rounded-full"
+                    />
+                    <div class="ml-2">
+                      <p
+                        class="text-primary uppercase line-clamp-1 overflow-hidden"
+                      >
+                        Rizky Permana
+                      </p>
+                      <p>Ketua RT</p>
+                    </div>
+                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <!-- Review 5 -->
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-blue-900 rounded-md p-6">
+                  <p class="font-poppins line-clamp-6 overflow-hidden">
+                    Ecolective merupakan solusi cerdas untuk mengurangi sampah
+                    rumah tangga. Saya jadi lebih paham cara memilah dan
+                    memanfaatkan sampah dengan tepat. Sangat edukatif!
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="./assets/img/review-5.png"
+                      alt="review_image"
+                      class="w-12 h-12 rounded-full"
+                    />
+                    <div class="ml-2">
+                      <p
+                        class="text-primary uppercase line-clamp-1 overflow-hidden"
+                      >
+                        Sugiarto Wibowo
+                      </p>
+                      <p>Kepala Desa</p>
+                    </div>
+                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Review -->
+    </main>
+
+    <footer class="bg-green-100 text-blue-950 pt-20 pb-10 md:pt-28 relative">
+      <!-- Newsletter -->
+      <section
+        class="newsletter_content container text-white absolute top-0 right-0 left-0 -translate-y-1/2"
+        aria-label="Newsletter"
+      >
+        <div class="bg-blue-900 px-10 pt-5 pb-10 space-y-5 rounded-md">
+          <h3>
+            <span class="text-primary">Berlangganan</span>
+            ke newsletter kami
+          </h3>
+          <form
+            action="#"
+            method="POST"
+            class="flex flex-col md:flex-row gap-1"
+          >
+            <label for="email" class="sr-only">Alamat Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan Alamat Email"
+              class="w-full px-5 py-3 text-blue-900 rounded-md outline-none"
+              required
+            />
+            <button
+              type="submit"
+              class="flex items-center justify-center gap-1 bg-blue-950 px-5 py-3 rounded-md hover:opacity-80 duration-300"
+            >
+              <span>Subscribe</span>
+              <i class="ri-send-plane-2-fill"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Icon Sosmed -->
+      <div class="footer_icon container mt-16 mb-10">
+        <div class="border-b border-primary relative">
+          <div
+            class="absolute top-0 transform -translate-y-1/2 left-0 right-0 max-w-36 mx-auto"
+          >
+            <div class="bg-green-100 text-lg text-center space-x-3">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <i
+                  class="ri-facebook-fill hover:text-primary duration-300 cursor-pointer"
+                ></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <i
+                  class="ri-instagram-line hover:text-primary duration-300 cursor-pointer"
+                ></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter/X"
+              >
+                <i
+                  class="ri-twitter-x-fill hover:text-primary duration-300 cursor-pointer text-base"
+                ></i>
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+              >
+                <i
+                  class="ri-youtube-fill hover:text-primary duration-300 cursor-pointer"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Content -->
+      <div
+        class="footer_content container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-start"
+      >
+        <div>
+          <div class="inline-block">
+            <img
+              src="./assets/img/favicon.png"
+              alt="Logo Ecolective"
+              class="w-[150px]"
+            />
+            <h2
+              class="text-center font-bebas text-xl text-green-700 sm:text-2xl"
+            >
+              Ecolective
+            </h2>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-4 font-bold text-xl border-b pb-2 p-2">Menu</p>
+          <nav aria-label="Footer Menu">
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href="#beranda"
+                  class="block p-2 rounded hover:text-blue-600 hover:font-semibold transition duration-200"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tentang_kami"
+                  class="block p-2 rounded hover:text-blue-600 hover:font-semibold transition duration-200"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#kategori"
+                  class="block p-2 rounded hover:text-blue-600 hover:font-semibold transition duration-200"
+                  >Kategori</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="block p-2 rounded hover:text-blue-600 hover:font-semibold transition duration-200"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ulasan"
+                  class="block p-2 rounded hover:text-blue-600 hover:font-semibold transition duration-200"
+                  >Ulasan</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <address>
+          <p class="mb-4 font-bold text-xl">Kontak Kami</p>
+          <ul class="space-y-1 not-italic">
+            <li>
+              <a href="tel:+628123456789" class="hover:text-blue-600">
+                <i class="ri-phone-line"></i> +62 8123456789
+              </a>
+            </li>
+            <li>
+              <a href="mailto:Ecolective@gmail.com" class="hover:text-blue-600">
+                <i class="ri-mail-send-line"></i> Ecolective@gmail.com
+              </a>
+            </li>
+            <li><i class="ri-map-pin-line"></i> Jakarta, Indonesia</li>
+          </ul>
+        </address>
+      </div>
+
+      <!-- Privacy & Copyright -->
+      <div class="copy__right container mt-10 text-center">
+        <p class="opacity-50">
+          Copyright &copy; 2025 Ecolective. All Rights Reserved.
+        </p>
+        <p class="text-sm opacity-60 mt-2">
+          <a href="#" class="underline hover:text-blue-600">Privacy Policy</a> |
+          <a href="#" class="underline hover:text-blue-600"
+            >Terms & Conditions</a
+          >
+        </p>
+      </div>
+
+      <!-- Background Image -->
+      <div
+        class="footer_image absolute bottom-0 left-0 opacity-20 pointer-events-none"
+      >
+        <img
+          src="./assets/img/leaves.png"
+          alt="Daun dekoratif"
+          class="w-full lg:w-1/2"
+        />
+      </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a
+      href="#"
+      class="fixed right-4 bottom-4 bg-primary shadow-sm inline-flex items-center justify-center w-12 h-12 rounded-full text-lg z-50 hover:-translate-y-1 duration-300 animate-movingY"
+      id="scroll-up"
+    >
+      <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- TypedJS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#typed", {
+        strings: ["Cash", "Kebaikan", "Keuntungan", "Manfaat"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+        startDelay: 500,
+        smartBackspace: true,
+        loop: true,
+      });
+    </script>
+    <!-- Main -->
+    <script src="./main.js"></script>
+  </body>
+</html>
